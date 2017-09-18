@@ -15,5 +15,4 @@ public class OptionalExtensions {
         // if present returns optional with that value, or otherwise provide defined optional
         someOptional.or(() -> Optional.of("Nothing"));
     }
-
 }

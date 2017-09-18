@@ -1,6 +1,5 @@
 package me.andremueller.kittenfetcher;
 
-import me.andremueller.randomresgen.RandomResolutionGenerator;
 import me.andremueller.resolution.Resolution;
 
 import javax.imageio.ImageIO;
@@ -16,7 +15,6 @@ public class KittenFetcher {
 
     public static Optional<BufferedImage> fetchKittenImage(Resolution resolution) {
         try {
-            RandomResolutionGenerator test = new RandomResolutionGenerator(1,2);
             URL fetchKittenUrl = new URL(format(KITTEN_URL_TEMPLATE, resolution.getWidth(), resolution.getHeight()));
             return Optional.ofNullable(ImageIO.read(fetchKittenUrl));
         } catch (IOException e) {
